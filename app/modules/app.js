@@ -11,7 +11,7 @@
         'hyperkind-tv.home',
         'hyperkind-tv.projects',
         'hyperkind-tv.resume',
-        'hyperkind-tv.services'
+        'hyperkind-tv.sponsors'
 
     ])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {

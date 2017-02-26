@@ -1,13 +1,13 @@
 (function() {
   angular
-    .module('hyperkind-tv.services')
-    .controller('ServicesController', [Controller]);
+    .module('hyperkind-tv.sponsors')
+    .controller('SponsorsController', [Controller]);
 
     function Controller() {
       var vm = this;
 
       function initialize() {
-        console.log('services');
+        console.log('sponsors');
       }
 
       initialize();
