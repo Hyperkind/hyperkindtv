@@ -1,0 +1,47 @@
+.modal-open .modal-dialog {
+  max-width: 800px;
+  width: 75%;
+}
+
+.modal-header {
+  text-transform: capitalize;
+}
+.donations-show-modal {
+  .double {
+    > * {
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+    }
+  }
+  .status-wrapper {
+    padding-top: 1rem;
+    .status {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      color: $color-green;
+      font-weight: bold;
+      &:not(.captured) {
+        color: $color-pink;
+      }
+    }
+    .source {
+      font-size: 1.5rem;
+    }
+  }
+  .processed-at {
+    color: $color-lighter;
+    font-weight: 300;
+  }
+  .amount {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .effective-amount {
+    color: $color-lighter;
+  }
+  .cause-name {
+    font-size: 1.5rem;
+    word-wrap:break-word;
+  }
+}

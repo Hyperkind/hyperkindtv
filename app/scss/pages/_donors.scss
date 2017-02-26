@@ -1,0 +1,77 @@
+.donors-list {
+
+  .donors {
+    @include span-columns(12);
+    border-bottom: 1px solid $color-line;
+    padding: 2rem 0rem 1rem 0;
+
+    .donor {
+
+      .member {
+        text-align: center;
+        @include span-columns(1);
+        .fa-user {
+          color: $color-green-dark;
+          font-size: 2.5rem;
+        }
+        .fa-user-o {
+          color: $color-pink;
+          font-size: 2.5rem;
+        }
+      }
+      .name {
+        @include span-columns(2)
+        @include shift(1);
+        text-align: left;
+        padding: 0rem 0rem 0rem 3rem;
+
+        .donor-name {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+      }
+
+      .donated {
+        @include span-columns(2)
+        text-align: right;
+
+        .amount {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+      }
+
+      .date {
+        @include span-columns(2)
+        text-align: right;
+      }
+
+      .actions {
+        @include span-columns(2)
+        font-size: 2.5rem;
+        text-align: right;
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+    .donor-info {
+      @include span-columns(12);
+      margin: 2rem 0 0 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .sorts {
+    margin: 1rem auto;
+    a {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+}

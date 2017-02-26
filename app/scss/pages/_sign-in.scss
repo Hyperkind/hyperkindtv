@@ -1,0 +1,24 @@
+.sign-in {
+    background-color: $color-blue;
+    height: 100%;
+    padding-top: 15%;
+    padding-bottom: 20%;
+    .logo {
+      @include shift(2);
+      @include span-columns(8);
+    }
+
+    .organization-name {
+      color: $color-pink;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .form-section {
+        @include shift(3);
+        @include span-columns(6);
+        * label {
+          color: $color-white;
+        }
+    }
+}

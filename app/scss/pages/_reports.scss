@@ -1,0 +1,30 @@
+.reports {
+
+  .sort-row {
+    @include span-columns(3);
+    margin-top: 1em;
+  }
+
+  .graph-container {
+    @include span-columns(12);
+    margin-top: 1em;
+
+    img {
+      @include span-columns(12);
+      height: 20em;
+    }
+  }
+
+  .buttons {
+    @include media($desktop) {
+      @include shift(8);
+      @include span-columns(4);
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    button {
+      @include span-columns(6);
+    }
+  }
+}

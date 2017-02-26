@@ -1,0 +1,99 @@
+@import 'hack/trigger_watch';
+
+//[JG]: Bourbon and neat must come first, followed by grid settings.
+@import './bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import './bower_components/neat/app/assets/stylesheets/_neat.scss';
+
+@import 'base/grid';
+@import 'base/modifiers';
+
+@import 'components/buttons';
+@import 'components/cause-stat';
+@import 'components/cause-listing';
+@import 'components/cause-type-select';
+@import 'components/donate-modal';
+@import 'components/donations-show-modal';
+@import 'components/donor-payment-method';
+@import 'components/donor-payment-method-edit';
+@import 'components/dropdown';
+@import 'components/datetime-picker';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/errors-panel';
+@import 'components/headers';
+@import 'components/line-chart';
+@import 'components/modal';
+@import 'components/navigation';
+@import 'components/jc-progress-bar';
+@import 'components/donations-list';
+@import 'components/sidebar';
+@import 'components/slider';
+@import 'components/slider-input';
+@import 'components/social-media-share';
+@import 'components/stat';
+@import 'components/tables';
+@import 'components/tabs';
+@import 'components/total-filter';
+
+@import 'pages/account';
+@import 'pages/cause-dashboard';
+@import 'pages/causes-browse';
+@import 'pages/causes-form-basic';
+@import 'pages/donors';
+@import 'pages/donor-edit';
+@import 'pages/donor-profile';
+@import 'pages/home';
+@import 'pages/reports';
+@import 'pages/sign-in';
+
+
+//Essential
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0; //Remove whitespace around page
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: $color-text;
+}
+
+* {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+
+a.text {
+  color: $color-pink;
+  text-decoration: underline;
+}
+
+hr {
+  border-color: $color-line;
+  border-top: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-6 {
+  padding: 6rem;
+}
+
+.center {
+  text-align: center;
+}

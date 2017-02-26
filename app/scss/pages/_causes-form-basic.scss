@@ -1,0 +1,171 @@
+.form-basics  {
+  @include span-columns(10);
+
+  .causes-form-header {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .input-header{
+    text-transform: uppercase;
+    color: $color-grey-dark;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .bold-input {
+    input {
+      color: $color-blue;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 0 0 0 3rem;
+    }
+  }
+
+  .resetimg {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    cursor: pointer;
+  }
+
+  .input-field{
+    margin: 0 0 2rem 0;
+  }
+
+  input:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+  .info {
+    font-size: 1.5rem;
+  }
+
+  .date-input {
+    @include span-columns(3);
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  .time-input {
+    @include span-columns(3);
+    margin-top: 1.4rem;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .form-action {
+    @include span-columns(3);
+  }
+
+  .settings-slider {
+    .switch {
+      @include span-columns(1);
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .source-selected {
+    background-color: $color-pink;
+    color: #fff;
+    .cause-icon-ongoing {
+      background-image: url("/images/icon-ongoing.png");
+    }
+  }
+
+  .source-no-selected {
+    background-color: $color-grey;
+  }
+
+  .matchers{
+    border-top: .1rem solid $color-line;
+    border-bottom: .1rem solid $color-line;
+    padding: 1.5rem 0 1.5rem 0;
+    margin: 1.5rem 0 1.5rem 0;
+    .matcher{
+      @include media($desktop) {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+      @include media($mobile) {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+      text-align: center;
+
+      div {
+        font-size: 1rem;
+        >a{
+          color: $color-pink;
+        }
+      }
+      img{
+        width: rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+      &.bonus {
+        img {
+          border: 1px solid $color-pink;
+        }
+      }
+      .multiplier{
+        >span{
+          font-size: 2rem;
+        }
+      }
+      .name{
+        font-size: 1.2rem;
+        height: 3rem;
+        overflow: hidden;
+
+      }
+      .button{
+        margin:.5rem 0;
+        a{
+          display:inline-block;
+          padding:1.8rem;
+          width: 5rem;
+          height: 5rem;
+          border: 1px solid grey;
+          border-radius: 50%;
+          span{
+            color:grey;
+          }
+        }
+      }
+      >a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 5rem;
+        font-size: 1rem;
+      }
+      a:hover{
+        background: $color-grey;
+        cursor: pointer;
+      }
+    }
+  }
+  .logo-video {
+    margin-top: 2rem;
+    overflow: hidden;
+
+    img {
+      width: 50%;
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

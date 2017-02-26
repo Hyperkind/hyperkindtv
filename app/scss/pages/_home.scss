@@ -1,0 +1,85 @@
+.home {
+  background-color: $color-grey-light;
+  padding-top: 1rem;
+
+  .organization-stats-section {
+    margin: 1rem;
+    padding: 1rem;
+    .data {
+      background-color: $color-white;
+      padding: 1rem;
+      .stats {
+        .triple .box {
+          @include media($mobile) {
+            @include span-columns(12);
+            margin-bottom: 1rem;
+          }
+          @include media($desktop) {
+            @include span-columns(4);
+            @include omega(3n);
+          }
+
+          text-align: center;
+          border-top: 1px solid $color-line;
+          padding-top: 1rem;
+        }
+        .main {
+          text-align: center;
+          padding-bottom: 1rem;
+          .value {
+            @include media($mobile) {
+              font-size: 2.5rem;
+            }
+            @include media($desktop) {
+              font-size: 5rem;
+            }
+            font-weight: bold;
+          }
+          .label {
+            display: block;
+          }
+        }
+        .box {
+          .icon {
+            @include media($mobile) {
+              font-size: 2rem;
+            }
+            @include media($desktop) {
+              font-size: 3rem;
+            }
+            vertical-align: middle;
+          }
+          .text {
+            display: inline-block;
+            vertical-align: top;
+            .value {
+              font-size: 2rem;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cause-stats-section {
+    padding: 1rem;
+    margin: 1rem;
+    .cause-listing {
+      background-color: $color-white;
+      padding: 1rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .recent-transactions-section {
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    .data {
+      background-color: $color-white;
+      padding: 1rem;
+    }
+  }
+}

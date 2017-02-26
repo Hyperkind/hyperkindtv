@@ -1,0 +1,27 @@
+.jc-progress-bar {
+    border-radius: 2rem;
+    background-color: $color-grey;
+    margin: 0.5rem 0;
+    max-width: 90%;
+    position: relative;
+    text-align: right;
+
+    .progress {
+        min-height: 0.25rem;
+        background-color: $color-green-dark;
+        border-radius: 2rem;
+    }
+
+    .value {
+      position: absolute;
+      top: -0.7rem;
+      font-weight: bold;
+      min-width: 10%;
+      color: $color-grey-dark;
+    }
+    &.pink {
+      .progress {
+        background-color: $color-pink;
+      }
+    }
+}

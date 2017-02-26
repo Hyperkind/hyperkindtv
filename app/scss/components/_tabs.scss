@@ -1,0 +1,33 @@
+.tabs {
+  @include span-columns(12);
+  border-bottom: 1px solid $color-line;
+  padding-left: 0;
+  .tab {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    background: $color-line;
+    vertical-align: bottom;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    &.active {
+      background: $color-pink;
+      font-size: 1.4rem;
+      color: $color-white;
+    }
+    &:not(.active):hover {
+      @include filter(brightness(70%));
+    }
+
+    a {
+      display: inline-block;
+      @include media($mobile) {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      @include media($desktop) {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.cause-dashboard {
+
+  .matchers-section {
+    @include span-columns(12);
+    margin-bottom: 2rem;
+    table {
+      margin-top: 1rem;
+    }
+    .matcher {
+      .image {
+        width: 3rem;
+        text-align: center;
+        img {
+          border-radius: 50%;
+          width: 100%;
+        }
+      }
+      .multipier {
+        text-align: right;
+      }
+    }
+  }
+}

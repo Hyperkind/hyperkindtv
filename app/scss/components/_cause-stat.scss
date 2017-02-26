@@ -1,0 +1,44 @@
+.cause-stat {
+  border: 1px solid $color-line;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+
+  @include media($desktop) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+
+  .cause-title {
+    text-align: center;
+    color: $color-text;
+    border-bottom: 1px solid $color-line;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+
+  .counts {
+    @include span-columns(6);
+    border-right: 1px solid $color-line;
+    text-align: right;
+    padding: 0.25rem;
+    overflow: hidden;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .total-raised {
+    @include span-columns(6);
+    text-align: right;
+    padding: 0.25rem;
+    overflow: hidden;
+
+    p {
+      margin: 0;
+    }
+  }
+}

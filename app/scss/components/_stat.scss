@@ -1,0 +1,35 @@
+.stat {
+  display: block;
+  @include media($desktop) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+  .text {
+  }
+  .number {
+    font-weight: bold;
+  }
+  .jc-progress-bar {
+    margin-top: 0;
+    .value {
+      font-weight: normal;
+    }
+  }
+  &:not(.secondary) {
+    .jc-progress-bar {
+      .progress {
+        background-color: $color-light-blue;
+      }
+    }
+  }
+  &.secondary {
+    .jc-progress-bar {
+      .progress {
+        background-color: $color-orange;
+      }
+    }
+  }
+}

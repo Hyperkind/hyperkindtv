@@ -1,0 +1,26 @@
+.social-media-share {
+  @include span-columns(3.5);
+  @include shift(4);
+  background-color: $color-blue;
+  height: 3rem;
+  margin-bottom: 2rem;
+
+  .text-container {
+    @include span-columns(2);
+    .header {
+      color: $color-orange;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .share-container {
+    @include span-columns(10);
+    img {
+      @include shift(.5);
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}

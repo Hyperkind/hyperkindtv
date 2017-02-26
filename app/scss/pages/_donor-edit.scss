@@ -1,0 +1,11 @@
+.donor-edit {
+
+  .save {
+    color: $color-pink;
+
+    .fa {
+      @include shift(11);
+      color: $color-pink;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.account-show {
+  .form-section {
+    .subdomain {
+      input {
+        color: $color-pink;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .double {
+      height: 10rem;
+    }
+    label {
+      color: $color-text;
+    }
+    img {
+      width: 8rem;
+    }
+  }
+}

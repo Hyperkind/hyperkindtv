@@ -1,0 +1,8 @@
+.errors-panel {
+    color: $color-red;
+    margin-top: 1rem;
+    @include span-columns(12);
+    ul {
+        margin-top: 0.25rem;
+    }
+}

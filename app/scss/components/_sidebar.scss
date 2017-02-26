@@ -1,0 +1,71 @@
+.sidebar {
+  @include media($desktop) {
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    overflow: auto;
+    z-index: 100;
+  }
+    background-color: $color-blue;
+    .info {
+        padding: 1rem;
+        .name {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: $color-menu-text;
+        }
+        .organization {
+            color: $color-orange;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .links {
+        @include media($mobile) {
+          margin-bottom: 0;
+          text-align: center;
+          .label {
+            display: none;
+          }
+          li {
+            display: inline-block;
+            padding-bottom: 0;
+          }
+        }
+        color: $color-menu-text;
+        li {
+            cursor: pointer;
+            padding: 0;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                &:hover {
+                    color: $color-white;
+                }
+            }
+            img {
+                width: 2rem;
+                color: $color-white;
+            }
+            &.active {
+                background-color: $color-pink;
+                color: $color-white;
+            }
+        }
+    }
+}
+.with-sidebar {
+  padding: 1rem;
+  @include media($desktop) {
+    margin-left: 200px;
+  }
+}

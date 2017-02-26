@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+
+    thead, tbody, tr {
+      width: 100%;
+    }
+    th {
+        text-transform: uppercase;
+        border-bottom: 1px solid $color-line;
+        padding: 0.25rem 1rem;
+        text-align: left;
+        font-weight: 200;
+
+        &.st-sort-ascent:after {
+          content: ' ↑';
+        }
+        &.st-sort-descent:after {
+          content: ' ↓';
+        }
+
+        &[data-st-sort], &[st-stort] {
+          cursor: pointer;
+          &:hover {
+            color: $color-pink;
+          }
+        }
+    }
+    td {
+        padding: 0.25rem 1rem;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+    td.number, th.number {
+        text-align: right;
+    }
+    td.action, th.action {
+        text-align: center;
+    }
+
+    td.action {
+        button, a {
+            cursor: pointer;
+        }
+        a:hover {
+          color: $color-pink;
+        }
+    }
+
+    tr:hover {
+      background-color: $color-white-smoke;
+    }
+
+}
+
+.st-sort-ascent:after {
+  content: ' ↑';
+}
+
+.st-sort-descent:after{
+  content: ' ↓';
+}

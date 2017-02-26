@@ -1,0 +1,27 @@
+.datetime-picker{
+  span {
+    color: $color-pink;
+  }
+  .flatpickr{
+    font-size:1.5rem;
+  }
+  &.horizontal{
+    @include media($desktop) {
+    	@include span-columns(4);
+        .label{
+          @include span-columns(4);
+          padding: .6rem 0;
+          margin: 0;
+          label{
+            font-size: 1rem;
+          }
+        }
+        .picker{
+          @include span-columns(8);
+        }
+      }
+    }
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+}

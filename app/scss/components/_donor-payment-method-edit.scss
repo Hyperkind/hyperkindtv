@@ -1,0 +1,13 @@
+.donor-payment-method-edit {
+  .buttons {
+    @include span-columns(6);
+  }
+  .card {
+    @include span-columns(3);
+    @include shift(6);
+
+    background-color: transparent;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+  }
+}

@@ -1,0 +1,12 @@
+.error {
+  color: $color-pink;
+}
+
+.alert {
+  color: $color-white-smoke;
+  background-color: $color-pink;
+  padding: 0.25rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}

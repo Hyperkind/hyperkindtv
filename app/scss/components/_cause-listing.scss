@@ -1,0 +1,99 @@
+.cause-listing {
+  margin-top: 2em;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $color-line;
+  @include span-columns(12);
+
+  .cause-name {
+
+    .name{
+      font-size: 1.5rem;
+      font-weight: bold;
+      word-break: break-word;
+      @include media($desktop) {
+        @include span-columns(8);
+      }
+      @include media($mobile) {
+        @include span-columns(10);
+      }
+    }
+
+    .actions {
+      text-align: right;
+
+      @include media($desktop) {
+        @include span-columns(4);
+        @include omega();
+      }
+      @include media($mobile) {
+        @include span-columns(2);
+      }
+
+      a {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+
+        &:hover {
+          color: $color-pink;
+          cursor: pointer;
+        }
+      }
+      img {
+        height: 2rem;
+      }
+    }
+  }
+
+  .cause-stats {
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+    @include media($desktop) {
+      @include span-columns(12);
+    }
+    .progress-bar {
+      @include media($mobile) {
+        @include span-columns(12);
+      }
+      @include media($desktop) {
+        @include span-columns(12);
+      }
+    }
+
+    .badge {
+      text-align: center;
+      text-transform: capitalize;
+      display: inline-block;
+      font-weight: 300;
+      padding: 0.15rem 0.75rem;
+      border-radius: .2rem;
+      margin:.1rem;
+      &.ok {
+        background-color: $color-green-dark;
+        color: $color-white;
+      }
+      &:not(.ok) {
+        background-color: red;
+        color: $color-white;
+      }
+      &.neutral {
+        background-color: $color-grey-dark;
+        color: $color-white;
+
+      }
+      &.info {
+        background-color: $color-orange;
+        color: $color-white;
+      }
+      &.featured {
+        background-color: $color-base;
+        color: $color-white;
+      }
+    }
+  }
+
+
+
+}

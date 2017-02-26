@@ -1,0 +1,11 @@
+.line-chart {
+  @include span-columns(12);
+  // @include row();
+
+  canvas {
+    // background-color: $color-blue;
+  }
+
+  .chart.chart-line {
+  }
+}

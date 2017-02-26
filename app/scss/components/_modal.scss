@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 200;
+
+  @include media($mobile) {
+    @include span-columns(12);
+    padding: 1rem;
+  }
+
+  img {
+    width: 25%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+}
+
+.modal-header {
+  font-size: 2.5rem;
+}
+
+.modal-dialog {
+  background-color: $color-white;
+  border-radius: 10px;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visiblity .25s;
+  @include outer-container();
+}
+
+.modal-border-top {
+  border-top: 1px solid $color-line;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-border-bottom {
+  border-bottom: 1px solid $color-line;
+  padding-bottom: .7rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content {
+  padding: 1rem;
+  font-size: 1rem;
+
+  .close-button {
+    float: right;
+    font-size: 1.4rem;
+    margin-top: -.3rem;
+    margin-right: -.3rem;
+    color: $color-text;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .modal-header {
+    @extend .modal-border-bottom;
+
+    .modal-title {
+      margin-bottom: 0;
+
+      &.large {
+        font-size: 1.7rem;
+      }
+    }
+
+  }
+
+  .modal-body {
+    p, .smaller-text {
+      font-size: 1rem;
+      margin-bottom: .3rem;
+    }
+  }
+
+  .modal-footer {
+    @extend .modal-border-top;
+  }
+}
+
+.modal-backdrop {
+  background-color: $color-black;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .25s, visiblity .25s;
+}
+
+.modal-open {
+  .modal-backdrop {
+    opacity: .75;
+    visibility: visible;
+  }
+
+  .modal-dialog {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-sm {
+  @include media($desktop) {
+    @include span-columns(4);
+    @include shift(4);
+  }
+
+  @include media($mobile) {
+    @include shift(1);
+    @include span-columns(10);
+  }
+}
+
+.modal-md {
+  @include media($desktop) {
+    @include span-columns(6);
+    @include shift(3);
+  }
+
+  @include media($mobile) {
+    margin: 3rem;
+    @include span-columns(12);
+  }
+}
